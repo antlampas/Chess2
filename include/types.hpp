@@ -15,6 +15,7 @@ namespace Chess
     using BoardType          = std::vector<ColumnType>;
     using CheckerType        = std::string;
     using DecodedCoordinates = std::pair<int,int>;
+    using CoordinatesType    = std::string;
 
     enum Teams {
                 WHITE = 'w',
