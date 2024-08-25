@@ -10,8 +10,17 @@ namespace Chess
 {
     class agent
     {
+
         private:
         player _player;
         std::shared_ptr<board> _board;
+
+        private:
+        std::stop_token                          stopToken;
+        std::shared_ptr<std::mutex>              mutex;
+        std::shared_ptr<std::deque<std::string>> incomingQueue;
+        std::shared_ptr<std::deque<std::string>> outgoingQueue;
+        std::string                              incomingMessage;
+        std::string                              outgoingMessage;
     }
 }
