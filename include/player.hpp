@@ -12,7 +12,8 @@ namespace Chess
     {
         public:
         TeamType getTeam();
-        TeamType setTeam(TeamType)
+        TeamType setTeam(TeamType);
+
         private:
         TeamType team;
     };
