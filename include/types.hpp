@@ -16,11 +16,12 @@ namespace Chess
     using CheckerType        = std::string;
     using DecodedCoordinates = std::pair<int,int>;
     using CoordinatesType    = std::string;
+    using TeamType           = char;
 
     enum Teams {
                 WHITE = 'w',
                 BLACK = 'b'
-               };
+              };
 
     enum Checkers {
                     PAWN   ='p',

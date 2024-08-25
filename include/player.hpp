@@ -11,6 +11,9 @@ namespace Chess
     class player
     {
         public:
-        char team;
+        TeamType getTeam();
+        TeamType setTeam(TeamType)
+        private:
+        TeamType team;
     };
 }
