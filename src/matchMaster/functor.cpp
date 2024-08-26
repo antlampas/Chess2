@@ -8,5 +8,5 @@
 
 namespace Chess
 {
-
+    void matchMaster::operator()(){}
 }

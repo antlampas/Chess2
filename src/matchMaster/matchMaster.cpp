@@ -8,5 +8,12 @@
 
 namespace Chess
 {
-
+    matchMaster::matchMaster() : turn(new turn),
+                                 stopSource({}),
+                                 mutex(new mutex),
+                                 incomingQueue(new std::deque<std::string>()),
+                                 outgoingQueue(new std::deque<std::string>()),
+                                 incomingMessage({}),
+                                 incomingMessage({})
+    {}
 }
