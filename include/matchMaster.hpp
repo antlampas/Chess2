@@ -15,6 +15,10 @@ namespace Chess
         void operator()();
 
         private:
+        agent agentA;
+        agent agentB;
+        
+        private:
         std::shared_ptr<std::condition_variable> turn;
         std::stop_source                         stopSource;
         std::shared_ptr<std::mutex>              mutex;

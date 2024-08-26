@@ -11,6 +11,8 @@ namespace Chess
     class player
     {
         public:
+        player() = delete;
+        player(std::string);
         TeamType getTeam();
         TeamType setTeam(TeamType);
 
