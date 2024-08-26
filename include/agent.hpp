@@ -50,5 +50,5 @@ namespace Chess
         std::shared_ptr<std::deque<std::string>> controllerOutgoingQueue;
         std::string                              controllerCncomingMessage;
         std::string                              controllerOutgoingMessage;
-    }
+    };
 }

@@ -17,5 +17,5 @@ namespace Chess
         
         private:
         BoardType _board;
-    }
+    };
 }
