@@ -5,6 +5,7 @@ fet_directory_property(MYDEFS COMPILE_DEFINITIONS)
 add_subdirectory(agent agent)
 add_subdirectory(board board)
 add_subdirectory(player player)
+add_subdirectory(matchMaster matchMaster)
 
 add_executable(chess main.cpp)
 
@@ -12,4 +13,5 @@ target_link_libraries(chess PUBLIC
                       agent
                       board
                       payer
-                    )
+                      matchMaster
+                     )
