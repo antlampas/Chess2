@@ -11,8 +11,8 @@ namespace Chess
     matchMaster::matchMaster() : turn(std::make_shared(new std::condition_variable)),
                                  stopSource({}),
                                  mutex(std::make_shared(new std::mutex)),
-                                 incomingQueue(new std::deque<std::string>()),
-                                 outgoingQueue(new std::deque<std::string>()),
+                                 incomingQueue(new std::queue<std::string>()),
+                                 outgoingQueue(new std::queue<std::string>()),
                                  incomingMessage({}),
                                  incomingMessage({}),
                                  agentA('A',
@@ -23,8 +23,8 @@ namespace Chess
                                         std::make_shared(new std::mutex),
                                         this->outgoingQueue,
                                         this->incomingQueue,
-                                        std::make_shared(new std::deque<std::string>()),
-                                        std::make_shared(new std::deque<std::string>())
+                                        std::make_shared(new std::queue<std::string>()),
+                                        std::make_shared(new std::queue<std::string>())
                                        ),
                                  agentA('B',
                                         player('B'),
@@ -34,8 +34,8 @@ namespace Chess
                                         std::make_shared(new std::mutex),
                                         this->outgoingQueue,
                                         this->incomingQueue,
-                                        std::make_shared(new std::deque<std::string>()),
-                                        std::make_shared(new std::deque<std::string>())
+                                        std::make_shared(new std::queue<std::string>()),
+                                        std::make_shared(new std::queue<std::string>())
                                        )
     {}
 }

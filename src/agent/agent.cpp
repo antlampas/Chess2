@@ -14,10 +14,10 @@ namespace Chess
                  std::stop_token                          stopToken,
                  std::shared_ptr<std::mutex>              internalMutex,
                  std::shared_ptr<std::mutex>              controllerMutex,
-                 std::shared_ptr<std::deque<std::string>> incomingQueue,
-                 std::shared_ptr<std::deque<std::string>> outgoingQueue,
-                 std::shared_ptr<std::deque<std::string>> controllerIncomingQueue,
-                 std::shared_ptr<std::deque<std::string>> controllerOutgoingQueue
+                 std::shared_ptr<std::queue<std::string>> incomingQueue,
+                 std::shared_ptr<std::queue<std::string>> outgoingQueue,
+                 std::shared_ptr<std::queue<std::string>> controllerIncomingQueue,
+                 std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue
                 ) : name(name),
                     _player(player),
                     turn(turn),

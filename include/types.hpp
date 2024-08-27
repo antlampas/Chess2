@@ -7,6 +7,7 @@
 #include <vector>
 #include <string>
 #include <pair>
+#include <queue>
 
 namespace Chess
 {

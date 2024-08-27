@@ -22,10 +22,10 @@ namespace Chess
               std::stop_token,
               std::shared_ptr<std::mutex>,
               std::shared_ptr<std::mutex>
-              std::shared_ptr<std::deque<std::string>>,
-              std::shared_ptr<std::deque<std::string>>,
-              std::shared_ptr<std::deque<std::string>>,
-              std::shared_ptr<std::deque<std::string>>
+              std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::queue<std::string>>
              );
         void operator()();
 
@@ -37,16 +37,16 @@ namespace Chess
         std::shared_ptr<std::condition_variable> turn;
         std::stop_token                          stopToken;
         std::shared_ptr<std::mutex>              internalMutex;
-        std::shared_ptr<std::deque<std::string>> incomingQueue;
-        std::shared_ptr<std::deque<std::string>> outgoingQueue;
+        std::shared_ptr<std::queue<std::string>> incomingQueue;
+        std::shared_ptr<std::queue<std::string>> outgoingQueue;
         std::string                              incomingMessage;
         std::string                              outgoingMessage;
 
         //Interface to client
         private:
         std::shared_ptr<std::mutex>              controllerMutex;
-        std::shared_ptr<std::deque<std::string>> controllerIncomingQueue;
-        std::shared_ptr<std::deque<std::string>> controllerOutgoingQueue;
+        std::shared_ptr<std::queue<std::string>> controllerIncomingQueue;
+        std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue;
         std::string                              controllerCncomingMessage;
         std::string                              controllerOutgoingMessage;
     };

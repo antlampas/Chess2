@@ -22,8 +22,8 @@ namespace Chess
         std::shared_ptr<std::condition_variable> turn;
         std::stop_source                         stopSource;
         std::shared_ptr<std::mutex>              mutex;
-        std::shared_ptr<std::deque<std::string>> incomingQueue;
-        std::shared_ptr<std::deque<std::string>> outgoingQueue;
+        std::shared_ptr<std::queue<std::string>> incomingQueue;
+        std::shared_ptr<std::queue<std::string>> outgoingQueue;
         std::string                              incomingMessage;
         std::string                              outgoingMessage;
 
