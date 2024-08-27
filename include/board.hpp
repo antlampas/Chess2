@@ -13,7 +13,7 @@ namespace Chess
         public:
         board();
         board(BoardType);
-        SquareType move(DecodedCoordinates,DecodedCoordinates);
+        SquareType move(DecodedCoordinatesType,DecodedCoordinatesType);
         
         private:
         BoardType _board;

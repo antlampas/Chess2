@@ -8,5 +8,6 @@
 
 namespace Chess
 {
-
+    board::board(){}
+    board::board(BoardType){}
 }

@@ -26,5 +26,9 @@ namespace Chess
         std::shared_ptr<std::deque<std::string>> outgoingQueue;
         std::string                              incomingMessage;
         std::string                              outgoingMessage;
+
+        private:
+        bool connectClient(TeamType);
+        bool disconnectClient(TeamType);
     };
 }

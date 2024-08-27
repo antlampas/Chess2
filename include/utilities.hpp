@@ -4,8 +4,16 @@
  *
  */
 
-
 namespace Chess
 {
-    
+    bool isColumnClogged(DecodedCoordinatesType);
+    bool isRowClogged(DecodedCoordinatesType);
+    bool isDiagonalClogged(DecodedCoordinatesType,Direction);
+    bool isNextSquareClogged(DecodedCoordinatesType,Direction);
+    bool isPawnMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
+    bool isRookMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
+    bool isKnightMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
+    bool isBishopMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
+    bool isQueenMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
+    bool isKingMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
 }

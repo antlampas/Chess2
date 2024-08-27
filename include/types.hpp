@@ -10,13 +10,13 @@
 
 namespace Chess
 {
-    using SquareType         = std::string;
-    using ColumnType         = std::vector<SquareType>;
-    using BoardType          = std::vector<ColumnType>;
-    using CheckerType        = std::string;
-    using DecodedCoordinates = std::pair<int,int>;
-    using CoordinatesType    = std::string;
-    using TeamType           = char;
+    using SquareType             = std::string;
+    using ColumnType             = std::vector<SquareType>;
+    using BoardType              = std::vector<ColumnType>;
+    using CheckerType            = std::string;
+    using DecodedCoordinatesType = std::pair<int,int>;
+    using CoordinatesType        = std::string;
+    using TeamType               = char;
 
     enum Teams {
                 WHITE = 'w',
@@ -31,4 +31,14 @@ namespace Chess
                     QUEEN  ='q',
                     KING   ='k'
                   };
+    enum Direction {
+                     N  = "n",
+                     NE = "se",
+                     E  = "e",
+                     SE = "se",
+                     S  = "s",
+                     SO = "so",
+                     O  = "s",
+                     NO = "no",
+                   };
 }

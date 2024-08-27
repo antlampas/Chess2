@@ -15,8 +15,8 @@ namespace Chess
                                  outgoingQueue(new std::deque<std::string>()),
                                  incomingMessage({}),
                                  incomingMessage({}),
-                                 agentA("A",
-                                        player("A"),
+                                 agentA('A',
+                                        player('A'),
                                         this->turn;
                                         this->stopSource.get_token(),
                                         this->mutex,
@@ -26,8 +26,8 @@ namespace Chess
                                         std::make_shared(new std::deque<std::string>()),
                                         std::make_shared(new std::deque<std::string>())
                                        ),
-                                 agentA("B",
-                                        player("B"),
+                                 agentA('B',
+                                        player('B'),
                                         this->turn;
                                         this->stopSource.get_token(),
                                         this->mutex,

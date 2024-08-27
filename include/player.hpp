@@ -12,7 +12,7 @@ namespace Chess
     {
         public:
         player() = delete;
-        player(std::string);
+        player(TeamType);
         TeamType getTeam();
         TeamType setTeam(TeamType);
 

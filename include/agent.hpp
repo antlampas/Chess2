@@ -16,8 +16,7 @@ namespace Chess
     {
         public:
         agent() = delete;
-        agent(
-              std::string,
+        agent(TeamType,
               player,
               std::shared_ptr<std::condition_variable>,
               std::stop_token,

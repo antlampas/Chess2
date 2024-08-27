@@ -4,9 +4,9 @@
  *
  */
 
- #include "board.hpp"
+ #include "matchMaster.hpp"
 
 namespace Chess
 {
-    SquareType board::move(DecodedCoordinatesType from,DecodedCoordinatesType to){}
+    bool matchMaster::disconnectClient(std::string name){}
 }
