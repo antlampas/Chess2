@@ -9,24 +9,26 @@
 namespace Chess
 {
     agent::agent(std::string                              name,
-                 player                                   p,
-                 std::shared_ptr<std::condition_variable> turn,
-                 std::stop_token                          stopToken,
-                 std::shared_ptr<std::mutex>              internalMutex,
-                 std::shared_ptr<std::mutex>              controllerMutex,
-                 std::shared_ptr<std::queue<std::string>> incomingQueue,
-                 std::shared_ptr<std::queue<std::string>> outgoingQueue,
-                 std::shared_ptr<std::queue<std::string>> controllerIncomingQueue,
-                 std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue
+                player                                    p,
+                std::stop_token                           stopToken,
+                std::shared_ptr<std::mutex>               internalMutex,
+                std::shared_ptr<std::queue<std::string>>  internalIncomingQueue,
+                std::shared_ptr<std::queue<std::string>>  internalOutgoingQueue,
+                std::shared_ptr<std::mutex>               externalMutex,
+                std::shared_ptr<std::queue<std::string>>  externalIncomingQueue,
+                std::shared_ptr<std::queue<std::string>>  externalOutgoingQueue
                 ) : name(name),
-                    _player(player),
-                    turn(turn),
-                    stopToken(stopToken),
-                    internalMutex(internalMutex),
-                    controllerMutex(controllerMutex),
-                    incomingQueue(incomingQueue),
-                    outgoingQueue(outgoingQueue),
-                    controllerIncomingQueue(controllerIncomingQueue),
-                    controllerOutgoingQueue(controllerOutgoingQueue)
-                {}
+                    _player(std::move(p)),
+                    stopToken(std::move(stopToken)),
+                    internalMutex(std::move(mutex)),
+                    intenralIncomingQueue(std::move(internalIncomingQueue)),
+                    internalOutgoingQueue(std::move(internalOutgoingQueue)),
+                    internalIncomingMessage({}),
+                    internalOutgoingMessage({}),
+                    externalMutex(std::move(mutex)),
+                    externalIncomingQueue(std::move(externalIncomingQueue)),
+                    externalOutgoingQueue(std::move(externalOutgoingQueue)),
+                    externalIncomingMessage({}),
+                    externalOutgoingMessage({})
+    {}
 }
