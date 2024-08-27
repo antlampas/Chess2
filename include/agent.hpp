@@ -33,7 +33,7 @@ namespace Chess
         std::shared_ptr<std::mutex>              controllerMutex;
         std::shared_ptr<std::queue<std::string>> controllerIncomingQueue;
         std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue;
-        std::string                              controllerCncomingMessage;
+        std::string                              controllerIncomingMessage;
         std::string                              controllerOutgoingMessage;
 
         public:
@@ -41,6 +41,9 @@ namespace Chess
         agent(std::string,
               player,
               std::stop_token,
+              std::shared_ptr<std::mutex>,
+              std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::queue<std::string>>,
               std::shared_ptr<std::mutex>,
               std::shared_ptr<std::queue<std::string>>,
               std::shared_ptr<std::queue<std::string>>

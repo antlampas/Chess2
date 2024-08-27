@@ -11,7 +11,11 @@ namespace Chess
     class matchMaster
     {
         public:
-        matchMaster();
+        matchMaster() = delete;
+        matchMaster(std::shared_ptr<std::mutex>,
+                    std::shared_ptr<std::queue<std::string>>,
+                    std::shared_ptr<std::queue<std::string>>
+                   )
         void operator()();
 
         private:
@@ -21,11 +25,17 @@ namespace Chess
         private:
         std::shared_ptr<std::condition_variable> turn;
         std::stop_source                         stopSource;
-        std::shared_ptr<std::mutex>              mutex;
-        std::shared_ptr<std::queue<std::string>> incomingQueue;
-        std::shared_ptr<std::queue<std::string>> outgoingQueue;
-        std::string                              incomingMessage;
-        std::string                              outgoingMessage;
+        std::shared_ptr<std::mutex>              internalMutex;
+        std::shared_ptr<std::queue<std::string>> internalIncomingQueue;
+        std::shared_ptr<std::queue<std::string>> internalOutgoingQueue;
+        std::string                              internalIncomingMessage;
+        std::string                              internalOutgoingMessage;
+
+        std::shared_ptr<std::mutex>              controllerMutex;
+        std::shared_ptr<std::queue<std::string>> controllerIncomingQueue;
+        std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue;
+        std::string                              controllerIncomingMessage;
+        std::string                              controllerOutgoingMessage;
 
         private:
         bool connectClient(TeamType);

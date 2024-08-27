@@ -8,13 +8,21 @@
 
 namespace Chess
 {
-    matchMaster::matchMaster() : turn(std::make_shared(new std::condition_variable)),
+    matchMaster::matchMaster(std::shared_ptr<std::mutex> controllerMutex,
+                             std::shared_ptr<std::queue<std::string>> controllerIncomingQueue,
+                             std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue
+                            ) : turn(std::make_shared(new std::condition_variable)),
                                  stopSource({}),
-                                 mutex(std::make_shared(new std::mutex)),
-                                 incomingQueue(new std::queue<std::string>()),
-                                 outgoingQueue(new std::queue<std::string>()),
-                                 incomingMessage({}),
-                                 incomingMessage({}),
+                                 internalMutex(std::make_shared(new std::mutex)),
+                                 internalIncomingQueue(new std::queue<std::string>()),
+                                 internalOutgoingQueue(new std::queue<std::string>()),
+                                 internalIncomingMessage({}),
+                                 internalOutgoingMessage({}),
+                                 controllerMutex(controllerMutex),
+                                 controllerIncomingQueue(controllerIncomingQueue),
+                                 controllerOutgoingQueue(controllerOutgoingQueue),
+                                 controllerIncomingMessage({}),
+                                 controllerOutgoingMessage({}),
                                  agentA('A',
                                         player('A'),
                                         this->turn;
