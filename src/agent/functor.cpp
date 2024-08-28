@@ -8,5 +8,5 @@
 
 namespace Chess
 {
-    agent::operator()(){}
+    void agent::operator()(){}
 }

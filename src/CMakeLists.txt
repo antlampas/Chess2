@@ -13,7 +13,7 @@ add_executable(chess main.cpp)
 target_link_libraries(chess PUBLIC
                       agent
                       board
-                      payer
+                      player
                       matchMaster
                       utilities
                      )

@@ -8,5 +8,5 @@
 
 namespace Chess
 {
-    bool matchMaster::connectClient(std::string name){}
+    bool matchMaster::connectClient(TeamType name){}
 }

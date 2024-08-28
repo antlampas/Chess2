@@ -8,5 +8,5 @@
 
 namespace Chess
 {
-
+    TeamType player::getTeam(){}
 }

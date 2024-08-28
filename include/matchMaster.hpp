@@ -8,6 +8,8 @@
 #define MATCHMASTER_HPP
 
 #include "types.hpp"
+#include "agent.hpp"
+
 
 namespace Chess
 {
@@ -18,7 +20,7 @@ namespace Chess
         matchMaster(std::shared_ptr<std::mutex>,
                     std::shared_ptr<std::queue<std::string>>,
                     std::shared_ptr<std::queue<std::string>>
-                   )
+                   );
         void operator()();
 
         private:

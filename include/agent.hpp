@@ -11,6 +11,7 @@
 #include "board.hpp"
 #include "player.hpp"
 
+#include <stop_token>
 #include <condition_variable>
 
 namespace Chess
@@ -44,6 +45,7 @@ namespace Chess
         agent(std::string,
               player,
               std::stop_token,
+              std::shared_ptr<std::condition_variable>,
               std::shared_ptr<std::mutex>,
               std::shared_ptr<std::queue<std::string>>,
               std::shared_ptr<std::queue<std::string>>,

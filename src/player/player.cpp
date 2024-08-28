@@ -4,9 +4,9 @@
  *
  */
 
- #include "matchMaster.hpp"
+ #include "player.hpp"
 
 namespace Chess
 {
-    bool matchMaster::disconnectClient(TeamType name){}
+    player::player(TeamType team) : team(team){}
 }

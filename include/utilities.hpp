@@ -7,6 +7,8 @@
 #ifndef UTILITIES_HPP
 #define UTILITIES_HPP
 
+#include "types.hpp"
+
 namespace Chess
 {
     bool isColumnClogged(DecodedCoordinatesType);

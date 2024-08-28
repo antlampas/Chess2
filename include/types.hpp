@@ -11,6 +11,7 @@
 #include <string>
 #include <utility>
 #include <queue>
+#include <memory>
 
 namespace Chess
 {
@@ -36,14 +37,14 @@ namespace Chess
                     KING   ='k'
                   };
     enum Direction {
-                     N  = "n",
-                     NE = "se",
-                     E  = "e",
-                     SE = "se",
-                     S  = "s",
-                     SO = "so",
-                     O  = "s",
-                     NO = "no",
+                     N,
+                     NE,
+                     E,
+                     SE,
+                     S,
+                     SO,
+                     O,
+                     NO,
                    };
 }
 
