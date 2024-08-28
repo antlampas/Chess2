@@ -4,6 +4,9 @@
  *
  */
 
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include "types.hpp"
 
 namespace Chess
@@ -20,3 +23,5 @@ namespace Chess
         TeamType team;
     };
 }
+
+#endif

@@ -4,9 +4,12 @@
  *
  */
 
+#ifndef TYPES_HPP
+#define TYPES_HPP
+
 #include <vector>
 #include <string>
-#include <pair>
+#include <utility>
 #include <queue>
 
 namespace Chess
@@ -43,3 +46,5 @@ namespace Chess
                      NO = "no",
                    };
 }
+
+#endif

@@ -4,6 +4,9 @@
  *
  */
 
+#ifndef MATCHMASTER_HPP
+#define MATCHMASTER_HPP
+
 #include "types.hpp"
 
 namespace Chess
@@ -42,3 +45,5 @@ namespace Chess
         bool disconnectClient(TeamType);
     };
 }
+
+#endif

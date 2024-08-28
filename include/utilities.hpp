@@ -4,6 +4,9 @@
  *
  */
 
+#ifndef UTILITIES_HPP
+#define UTILITIES_HPP
+
 namespace Chess
 {
     bool isColumnClogged(DecodedCoordinatesType);
@@ -17,3 +20,5 @@ namespace Chess
     bool isQueenMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
     bool isKingMoveValid(DecodedCoordinatesType,DecodedCoordinatesType);
 }
+
+#endif

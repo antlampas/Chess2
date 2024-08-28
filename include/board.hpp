@@ -4,6 +4,9 @@
  *
  */
 
+#ifndef BOARD_HPP
+#define BOARD_HPP
+
 #include "types.hpp"
 
 namespace Chess
@@ -19,3 +22,5 @@ namespace Chess
         BoardType _board;
     };
 }
+
+#endif

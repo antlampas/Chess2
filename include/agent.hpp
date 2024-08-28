@@ -4,6 +4,9 @@
  *
  */
 
+#ifndef AGENT_HPP
+#define AGENT_HPP
+
 #include "types.hpp"
 #include "board.hpp"
 #include "player.hpp"
@@ -55,3 +58,5 @@ namespace Chess
         bool        writeMessage(bool,std::string);
     };
 }
+
+#endif
